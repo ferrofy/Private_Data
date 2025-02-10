@@ -1,4 +1,4 @@
-const passwords = ["team_ferrofy", "vpx_login", "tanav_login" ];
+const passwords = ["team_ferrofy", "vpx_login", "tanav_login","member_login" ];
 const Text_To_Display = " FerroFy Origin : 3 Dec 2024 \n[br]\n Start Plan 'Pool 0xt' : 7 Dec 2024 ";
 let speed = 30;
 let wrongPasswordSpeed = 30;
