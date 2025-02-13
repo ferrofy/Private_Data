@@ -1,5 +1,5 @@
 const passwords = ["team_ferrofy", "vpx_login", "tanav_login","member_login" ];
-const Text_To_Display = " FerroFy Origin : 3 Dec 2024 \n[br]\n Start Plan 'Pool 0xt' : 7 Dec 2024 ";
+const Text_To_Display = " >>> FerroFy Origin : 3 Dec 2024 [br] Start Plan 'Pool 0xt' : 7 Dec 2024 [br] Finish [hr] [br] It's Last Line Of Programm Thank You User For Your Time. Nothing Further :) [hr]";
 let speed = 30;
 let wrongPasswordSpeed = 30;
 let wrongPasswordAttempts = 0;
@@ -47,10 +47,10 @@ function displayText() {
   function typeNextChar() {
     if (i < Text_To_Display.length) {
       if (Text_To_Display.substring(i, i + 4) === "[hr]") {
-        log.innerHTML += '<hr class="neon-hr">';
+        log.innerHTML += ' <br> <hr class="neon-hr"> <br> ';
         i += 4;
       } else if (Text_To_Display.substring(i, i + 4) === "[br]") {
-        log.innerHTML += '<br>';
+        log.innerHTML += '<br> >>> ';
         i += 4;
       } else {
         log.innerHTML += Text_To_Display.charAt(i);
