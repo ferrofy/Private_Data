@@ -1,7 +1,7 @@
 const passwords = ["team_ferrofy", "vpx_login", "tanav_login","member_login" ];
 const Text_To_Display = " >>> FerroFy Origin : 3 Dec 2024 [br] Start Plan 'Pool 0xt' : 7 Dec 2024 [br] Start Plan 'Farm 0xt' : 16 Feb 2025 [br] Finish [hr] [br] Any Error? Contact At team.ferrofy@gmail.com or vpx.ferrofy@gmail.com [br] It's Last Line Of Programm Thank You User For Your Time. Nothing Further :) [hr]";
-let speed = 30;
-let wrongPasswordSpeed = 30;
+let speed = 10;
+let wrongPasswordSpeed = 10;
 let wrongPasswordAttempts = 0;
 let lengthErrorAttempts = 0;
 const maxPasswordAttempts = 5;
