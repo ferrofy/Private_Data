@@ -1,7 +1,7 @@
 const passwords = ["team_ferrofy", "vpx_login", "tanav_login","member_login" ];
 const Text_To_Display = " >>> Start Plan 'Pool 0xt' : 7 Dec 2024 [br] Investments - {VPX:510 , Tanav:610 , AKX:20 , KMX:20} [br] Shares in % - {VPX:44 , Tanav:53 , AKX:1.5 , KMX:1.5} [br] Reselling AKX ----1.5%----> VPX Just for 30 Rs On 13 Dec 2024 [br] New Shares in % {VPX:45.5 , Tanav:53 , KMX:1.5} [br] Reselling VPX ----1%----> Angel Just for 20 Rs On 16 Dec 2024 [br] New Shares in % {VPX:44.5 , Tanav:53 , KMX:1.5 , Angel:1} [br] Finish [hr] [br] Any Error? Contact At team.ferrofy@gmail.com or vpx.ferrofy@gmail.com [br] It's Last Line Of Programm Thank You User For Your Time. Nothing Further :) [hr]";
-let speed = 30;
-let wrongPasswordSpeed = 30;
+let speed = 10;
+let wrongPasswordSpeed = 10;
 let wrongPasswordAttempts = 0;
 let lengthErrorAttempts = 0;
 const maxPasswordAttempts = 5;
