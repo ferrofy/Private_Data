@@ -12,7 +12,7 @@ const transactions = [
     date: "17 Feb 2025",
     person: "VPX",
     amount: 30.1,
-    company_deduction_percentage: 2 / 100,
+    company_deduction_percentage: 3 / 100,
     get company_deduction_amount() {
       return (this.amount * this.company_deduction_percentage).toFixed(2);
     },
