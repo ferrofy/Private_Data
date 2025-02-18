@@ -84,8 +84,8 @@ const Text_To_Display = [
   `>>> On ${transactions[2].date} '${transactions[2].name}' ${transactions[2].action} ${transactions[2].amount} '${transactions[2].item}' for ₹ ${(transactions[2].purchased_price * transactions[2].amount).toFixed(2)} But, Original Price was ₹ ${(transactions[2].original_price * transactions[2].amount).toFixed(2)} Hence Profit ==> ₹ ${transactions[2].company_profit().toFixed(2)} [br][br]`,
   `>>> On ${transactions[3].date} '${transactions[3].name}' ${transactions[3].action} ${transactions[3].amount} '${transactions[3].item}' for ₹ ${(transactions[3].sold_price * transactions[3].amount).toFixed(2)} But, Original Price was ₹ ${(transactions[3].original_price * transactions[3].amount).toFixed(2)} Hence Profit ==> ₹ ${transactions[3].company_profit().toFixed(2)} [br][br]`,
   
-  `[hr]>>> Total Profit Of 14 Feb 2025 is : ₹ ${daily_profit["14_Feb_2025"].toFixed(2)} [br]`,
-  `>>> Total Profit Of 17 Feb 2025 is : ₹ ${daily_profit["17_Feb_2025"].toFixed(2)} [br]`,
+  `[hr]>>> Profit Of 14 Feb 2025 is : ₹ ${daily_profit["14_Feb_2025"].toFixed(2)} [br]`,
+  `>>> Profit Of 17 Feb 2025 is : ₹ ${daily_profit["17_Feb_2025"].toFixed(2)} [br]`,
   
   `[hr]>>> Total Profit Of Company is : ₹ ${total_profit.toFixed(2)} [br]`,
   
