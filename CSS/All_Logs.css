@@ -67,14 +67,6 @@ input[type="text"] {
     margin-bottom: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #00FF00;
-    border: none;
-    color: #121212;
-    cursor: pointer;
-}
-
 button:hover {
     background-color: #00cc00;
 }
@@ -86,4 +78,22 @@ button+button {
 .neon-hr {
     border: none;
     border-top: 5px solid #00FF00;
+}
+.eye{
+    padding: 10px 10px; 
+    background-color: #00ddff;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 1000;
+    border-radius: 20%;
+}
+button {
+    padding: 15px 200px; 
+    background-color: #00FF00;
+    border: none;
+    color: #121212;
+    cursor: pointer;
+    font-weight: 1000;
+    border-radius: 0%;
 }
