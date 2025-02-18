@@ -32,7 +32,7 @@ const transactions = [
 const Text_To_Display = [
   
   `[hr]>>> Any Error? Contact At team.ferrofy@gmail.com or vpx.ferrofy@gmail.com [br][br]`,
-  `>>> It's Last Line Of Program. Thank You User For Your Time. Nothing Further :) [hr] [br][br]`
+  `>>> It's Last Line Of Program. Thank You User For Your Time. Nothing Further :) [br][br]`
 ];
 
 document.getElementById("password").addEventListener("keypress", function (event) {
