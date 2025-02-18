@@ -7,7 +7,28 @@ let lengthErrorAttempts = 0;
 const maxPasswordAttempts = 5;
 const maxLengthAttempts = 3;
 const maxPasswordLength = 30;
-
+const transactions = [
+  {
+    date: "14 Feb 2025",
+    amount: 0.09 * 2,
+    source: " Exchange ",
+    title: " ATX ---> Server --> VPX "
+  },
+  {
+    date: "17 Feb 2025",
+    amount: 0.01 * 2,
+    source: " Exchange ",
+    title: " ATX ---> Server --> VPX "
+  }//,
+//  {
+  //  date: "17 Feb 2025",
+   // person: "VPX",
+    //amount: 30.1,
+  ///  company_profit: 30.1 *,
+  ///  source: " Invested ",
+  ///  title: " VPX --> Invetments "
+ /// },
+]
 const Text_To_Display = [
   
   `[hr]>>> Any Error? Contact At team.ferrofy@gmail.com or vpx.ferrofy@gmail.com [br][br]`,
