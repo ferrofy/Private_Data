@@ -131,26 +131,36 @@ function displayText() {
   let charIndex = 0;
   let currentElement = Text_To_Display[elementIndex].split("");
 
-  function typeNextChar() {
+ function typeNextChar() {
     if (charIndex < currentElement.length) {
-      if (Text_To_Display[elementIndex].substring(charIndex, charIndex + 4) === "[hr]") {
-        log.innerHTML += ' <br> <hr class="neon-hr"> <br> ';
-        charIndex += 4;
-      } else if (Text_To_Display[elementIndex].substring(charIndex, charIndex + 4) === "[br]") {
-        log.innerHTML += '<br>';
-        charIndex += 4;
-      }else {
-        log.innerHTML += currentElement[charIndex];
-        charIndex++;
-      }
-      setTimeout(typeNextChar, speed);
+        if (Text_To_Display[elementIndex].substring(charIndex, charIndex + 4) === "[hr]") {
+            log.innerHTML += ' <br> <hr class="neon-hr"> <br> ';
+            charIndex += 4;
+        } else if (Text_To_Display[elementIndex].substring(charIndex, charIndex + 4) === "[br]") {
+            log.innerHTML += '<br>';
+            charIndex += 4;
+        } else if (Text_To_Display[elementIndex].substring(charIndex, charIndex + 2) === "--") {
+            let endPos = Text_To_Display[elementIndex].indexOf("--", charIndex + 2);
+            if (endPos !== -1) {
+                let midText = Text_To_Display[elementIndex].substring(charIndex + 2, endPos);
+                log.innerHTML += `<div style="text-align: center; font-size: 2em;">${midText}</div>`;
+                charIndex = endPos + 2;
+            } else {
+                log.innerHTML += currentElement[charIndex];
+                charIndex++;
+            }
+        } else {
+            log.innerHTML += currentElement[charIndex];
+            charIndex++;
+        }
+        setTimeout(typeNextChar, speed);
     } else if (elementIndex < Text_To_Display.length - 1) {
-      elementIndex++;
-      charIndex = 0;
-      currentElement = Text_To_Display[elementIndex].split("");
-      setTimeout(typeNextChar, new_Line_Speed);
+        elementIndex++;
+        charIndex = 0;
+        currentElement = Text_To_Display[elementIndex].split("");
+        setTimeout(typeNextChar, new_Line_Speed);
     }
-  }
+}
 
   typeNextChar();
 }
