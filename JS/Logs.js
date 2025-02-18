@@ -1,12 +1,21 @@
-const passwords = ["team_ferrofy", "vpx_login", "tanav_login","member_login" ];
-const Text_To_Display = " >>> FerroFy Origin : 3 Dec 2024 [br] Start Plan 'Pool 0xt' : 7 Dec 2024 [br] Start Plan 'Farm 0xt' : 16 Feb 2025 [br] Finish [hr] [br] Any Error? Contact At team.ferrofy@gmail.com or vpx.ferrofy@gmail.com [br] It's Last Line Of Programm Thank You User For Your Time. Nothing Further :) [hr]";
-let speed = 10;
+const passwords = ["team_ferrofy", "vpx_login", "tanav_login", "member_login"];
+let speed = 1;
+let new_Line_Speed = 1;
 let wrongPasswordSpeed = 10;
 let wrongPasswordAttempts = 0;
 let lengthErrorAttempts = 0;
 const maxPasswordAttempts = 5;
 const maxLengthAttempts = 3;
 const maxPasswordLength = 30;
+
+const Text_To_Display = [
+  
+  `>>> FerroFy Origin   - 3 Dec 2024 [br][br]`,
+  `>>> Plan 'Pool 0xt'  - 7 Dec 2024 [br][br]`,
+  `>>> Plan 'Farm 0xt' - 16 Feb 2025 [br][br]`,
+  `[hr]>>> Any Error? Contact At team.ferrofy@gmail.com or vpx.ferrofy@gmail.com [br][br]`,
+  `>>> It's Last Line Of Program. Thank You User For Your Time. Nothing Further :) [hr] [br][br]`
+];
 
 document.getElementById("password").addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
@@ -34,7 +43,7 @@ function startLog() {
     wrongPasswordAttempts++;
     showError(passwordInput);
     if (wrongPasswordAttempts >= maxPasswordAttempts) {
-      window.location.href = 'https://ferrofy.github.io/Home';
+      window.location.href = 'https://ferrofy.github.io/Private_Data';
     }
   }
 }
@@ -42,21 +51,28 @@ function startLog() {
 function displayText() {
   const log = document.getElementById("log");
   log.innerHTML = "";
-  let i = 0;
+  let elementIndex = 0;
+  let charIndex = 0;
+  let currentElement = Text_To_Display[elementIndex].split("");
 
   function typeNextChar() {
-    if (i < Text_To_Display.length) {
-      if (Text_To_Display.substring(i, i + 4) === "[hr]") {
+    if (charIndex < currentElement.length) {
+      if (Text_To_Display[elementIndex].substring(charIndex, charIndex + 4) === "[hr]") {
         log.innerHTML += ' <br> <hr class="neon-hr"> <br> ';
-        i += 4;
-      } else if (Text_To_Display.substring(i, i + 4) === "[br]") {
-        log.innerHTML += '<br> >>> ';
-        i += 4;
-      } else {
-        log.innerHTML += Text_To_Display.charAt(i);
-        i++;
+        charIndex += 4;
+      } else if (Text_To_Display[elementIndex].substring(charIndex, charIndex + 4) === "[br]") {
+        log.innerHTML += '<br>';
+        charIndex += 4;
+      }else {
+        log.innerHTML += currentElement[charIndex];
+        charIndex++;
       }
       setTimeout(typeNextChar, speed);
+    } else if (elementIndex < Text_To_Display.length - 1) {
+      elementIndex++;
+      charIndex = 0;
+      currentElement = Text_To_Display[elementIndex].split("");
+      setTimeout(typeNextChar, new_Line_Speed);
     }
   }
 
@@ -75,7 +91,7 @@ function showLengthError() {
   const errorMessage = `Dear User, You Entered Password More Than 30 Characters Which Is Not Allowed.[br]Attempts Left: ${attemptsLeft}[br]Thank You For Your Time`;
   displayOverlayMessage(errorMessage, wrongPasswordSpeed);
   if (lengthErrorAttempts >= maxLengthAttempts) {
-    window.location.href = 'https://ferrofy.github.io/Home';
+    window.location.href = 'https://ferrofy.github.io/Private_Data';
   }
 }
 
@@ -117,7 +133,7 @@ function displayOverlayMessage(message, speed) {
         if (document.body.contains(overlay)) {
           document.body.removeChild(overlay);
         }
-      }, 3000);
+      }, 2500);
     }
   }
 
