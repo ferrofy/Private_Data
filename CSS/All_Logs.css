@@ -7,10 +7,14 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .center-text {
@@ -21,9 +25,6 @@ body {
     font-size: 16px;
     white-space: pre;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
 }
 
 @media (max-width: 768px) {
@@ -40,11 +41,12 @@ body {
 
 .log-container {
     width: 100%;
-    max-height: 70vh;
-    overflow-y: scroll;
+    max-height: calc(70vh - 100px); /* Subtract height of fixed elements */
+    overflow-y: auto;
     margin-bottom: 10px;
     padding: 10px;
     text-align: left;
+    flex: 1;
 }
 
 .password-container {
@@ -78,9 +80,11 @@ button+button {
 .neon-hr {
     border: none;
     border-top: 5px solid #00FF00;
+    margin: 0;
 }
-.eye{
-    padding: 10px 10px; 
+
+.eye {
+    padding: 10px 10px;
     background-color: #00ddff;
     border: none;
     color: #ffffff;
@@ -88,12 +92,44 @@ button+button {
     font-weight: 1000;
     border-radius: 20%;
 }
+
 button {
-    padding: 15px 125px; 
+    padding: 15px 125px;
     background-color: #00FF00;
     border: none;
     color: #121212;
     cursor: pointer;
     font-weight: 1000;
     border-radius: 0%;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fixed-header .ascii-art,
+.fixed-header .neon-hr {
+    width: 100%;
+}
+
+.fixed-header .neon-hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    height: calc(100vh - 100px);
 }
