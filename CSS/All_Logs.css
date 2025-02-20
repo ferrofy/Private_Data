@@ -29,24 +29,31 @@ body {
 
 @media (max-width: 768px) {
     .ascii-art {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .ascii-art {
-        font-size: 8px;
+        font-size: 6px;
     }
 }
 
 .log-container {
     width: 100%;
-    max-height: calc(70vh - 100px); /* Subtract height of fixed elements */
-    overflow-y: auto;
+    max-height: calc(70vh - 100px);
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     margin-bottom: 10px;
     padding: 10px;
     text-align: left;
     flex: 1;
+    white-space: nowrap;
+}
+
+.log-container::-webkit-scrollbar {
+    display: none;
 }
 
 .password-container {
@@ -70,7 +77,8 @@ input[type="text"] {
 }
 
 button:hover {
-    background-color: #00cc00;
+    background-color: #00000000;
+    color:#00FF00;
 }
 
 button+button {
@@ -80,12 +88,13 @@ button+button {
 .neon-hr {
     border: none;
     border-top: 5px solid #00FF00;
-    margin: 0;
+    margin: 0 auto;
+    width: calc(100% + 300px); 
 }
 
 .eye {
     padding: 10px 10px;
-    background-color: #00ddff;
+    background-color: rgba(255, 255, 255, 0.243);
     border: none;
     color: #ffffff;
     cursor: pointer;
@@ -122,14 +131,4 @@ button {
 .fixed-header .neon-hr {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.main-content {
-    width: 100%;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-    height: calc(100vh - 100px);
 }
