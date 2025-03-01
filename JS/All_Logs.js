@@ -54,14 +54,14 @@ const Plan_Pool_0xt_Investments = [
     PPX: 200  // 🚀📈 New Investing Journey Start 📈🚀 #6
   } // Add Comma (,) in future You Know your Errors ;D
   ////////////////////////////////////////////////////////////////////////////| Phase 3 |////////////////////////////////////////////////////////////////////////////
-  // Not Yet Final Might Be Near 30 Mar 2025 Might 100% Change For the Final List :) . So Don't Concider Yet
+  // Finally Will Start On 7 Mar 2025
   // {
-  //   VPX: 1300 ,     // + 300
-  //   Tanav: 1300 ,  // + 300
+  //   VPX: 1780 ,     // + 780
+  //   Tanav: 1080 ,  // + 80
   //   AKX:80 ,
-  //   KMX:30 ,
+  //   KMX:20 ,
   //   Angel: 90 , // +30
-  //   PPX: 500   // + 300  
+  //   PPX: 510   // + 310  
   //  }
 ]
 const Plan_Pool_0xt_Shares = [
@@ -97,14 +97,14 @@ const Plan_Pool_0xt_Shares = [
     PPX: 8.5   // 🚀📈 New Investing Journey Start 📈🚀 #6
   } // Add Comma (,) in future You Know your Errors ;D
   ////////////////////////////////////////////////////////////////////////////| Phase 3 |////////////////////////////////////////////////////////////////////////////
-  // Not Yet Final Might Be Near 30 Mar 2025 Might 100% Change For the Final List :) . So Don't Concider Yet So Whole Comment :)
+  // Finally Will Start On 7 Mar 2025
   // {
-  //   VPX: 1300 , // + 300
-  //   Tanav: 1300 , // + 300
-  //   AKX:80 ,
-  //   KMX:30 ,
-  //   Angel: 90 , // +30
-  //   PPX: 500 // + 300   
+  //   VPX: 50 ,          // + 7.5 %
+  //   Tanav: 30 ,     // - 12.5 %
+  //   AKX:2.5 ,        // - 1 %
+  //   KMX:0.5 ,
+  //   Angel: 2.5 ,
+  //   PPX: 14.5      // + 6  
   //  }
 ]
 
